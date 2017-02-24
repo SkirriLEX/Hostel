@@ -45,6 +45,9 @@
          this.calculToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
          this.textBox3 = new System.Windows.Forms.TextBox();
          this.groupBox1 = new System.Windows.Forms.GroupBox();
+         this.textBoxColor3 = new System.Windows.Forms.Button();
+         this.textBoxColor2 = new System.Windows.Forms.Button();
+         this.textBoxColor1 = new System.Windows.Forms.Button();
          this.textBoxFont3 = new System.Windows.Forms.Button();
          this.textBoxFont2 = new System.Windows.Forms.Button();
          this.textBoxFont1 = new System.Windows.Forms.Button();
@@ -62,10 +65,8 @@
          this.fontDialog1 = new System.Windows.Forms.FontDialog();
          this.FormFont4 = new System.Windows.Forms.Button();
          this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-         this.textBoxColor1 = new System.Windows.Forms.Button();
-         this.textBoxColor2 = new System.Windows.Forms.Button();
-         this.textBoxColor3 = new System.Windows.Forms.Button();
          this.FormColor1 = new System.Windows.Forms.Button();
+         this.Registartion_Butt = new System.Windows.Forms.Button();
          this.menuStrip1.SuspendLayout();
          this.groupBox1.SuspendLayout();
          this.statusStrip1.SuspendLayout();
@@ -110,7 +111,6 @@
          this.textBox2.TabIndex = 1;
          this.textBox2.Tag = "Some Text";
          this.textBox2.Text = "Какойто текст";
-         this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
          // 
          // SaveButt
          // 
@@ -125,12 +125,12 @@
          // 
          // Anketa
          // 
-         this.Anketa.Location = new System.Drawing.Point(402, 38);
+         this.Anketa.Location = new System.Drawing.Point(466, 27);
          this.Anketa.Name = "Anketa";
-         this.Anketa.Size = new System.Drawing.Size(137, 79);
+         this.Anketa.Size = new System.Drawing.Size(86, 31);
          this.Anketa.TabIndex = 2;
          this.Anketa.Tag = "Анкета для регистрации";
-         this.Anketa.Text = "Setup Information";
+         this.Anketa.Text = "Sign In";
          this.Anketa.UseVisualStyleBackColor = true;
          this.Anketa.Click += new System.EventHandler(this.Anketa_Click);
          // 
@@ -220,6 +220,39 @@
          this.groupBox1.Size = new System.Drawing.Size(365, 144);
          this.groupBox1.TabIndex = 1;
          this.groupBox1.TabStop = false;
+         // 
+         // textBoxColor3
+         // 
+         this.textBoxColor3.Location = new System.Drawing.Point(253, 79);
+         this.textBoxColor3.Name = "textBoxColor3";
+         this.textBoxColor3.Size = new System.Drawing.Size(24, 20);
+         this.textBoxColor3.TabIndex = 15;
+         this.textBoxColor3.Tag = "Set Text BackColor";
+         this.textBoxColor3.Text = "C";
+         this.textBoxColor3.UseVisualStyleBackColor = true;
+         this.textBoxColor3.Click += new System.EventHandler(this.TextBoxColour_Click);
+         // 
+         // textBoxColor2
+         // 
+         this.textBoxColor2.Location = new System.Drawing.Point(253, 53);
+         this.textBoxColor2.Name = "textBoxColor2";
+         this.textBoxColor2.Size = new System.Drawing.Size(24, 20);
+         this.textBoxColor2.TabIndex = 10;
+         this.textBoxColor2.Tag = "Set Text BackColor";
+         this.textBoxColor2.Text = "C";
+         this.textBoxColor2.UseVisualStyleBackColor = true;
+         this.textBoxColor2.Click += new System.EventHandler(this.TextBoxColour_Click);
+         // 
+         // textBoxColor1
+         // 
+         this.textBoxColor1.Location = new System.Drawing.Point(253, 28);
+         this.textBoxColor1.Name = "textBoxColor1";
+         this.textBoxColor1.Size = new System.Drawing.Size(24, 20);
+         this.textBoxColor1.TabIndex = 9;
+         this.textBoxColor1.Tag = "Set Text BackColor";
+         this.textBoxColor1.Text = "C";
+         this.textBoxColor1.UseVisualStyleBackColor = true;
+         this.textBoxColor1.Click += new System.EventHandler(this.TextBoxColour_Click);
          // 
          // textBoxFont3
          // 
@@ -363,39 +396,6 @@
          // 
          this.colorDialog1.AnyColor = true;
          // 
-         // textBoxColor1
-         // 
-         this.textBoxColor1.Location = new System.Drawing.Point(253, 28);
-         this.textBoxColor1.Name = "textBoxColor1";
-         this.textBoxColor1.Size = new System.Drawing.Size(24, 20);
-         this.textBoxColor1.TabIndex = 9;
-         this.textBoxColor1.Tag = "Set Text BackColor";
-         this.textBoxColor1.Text = "C";
-         this.textBoxColor1.UseVisualStyleBackColor = true;
-         this.textBoxColor1.Click += new System.EventHandler(this.TextBoxColour_Click);
-         // 
-         // textBoxColor2
-         // 
-         this.textBoxColor2.Location = new System.Drawing.Point(253, 53);
-         this.textBoxColor2.Name = "textBoxColor2";
-         this.textBoxColor2.Size = new System.Drawing.Size(24, 20);
-         this.textBoxColor2.TabIndex = 10;
-         this.textBoxColor2.Tag = "Set Text BackColor";
-         this.textBoxColor2.Text = "C";
-         this.textBoxColor2.UseVisualStyleBackColor = true;
-         this.textBoxColor2.Click += new System.EventHandler(this.TextBoxColour_Click);
-         // 
-         // textBoxColor3
-         // 
-         this.textBoxColor3.Location = new System.Drawing.Point(253, 79);
-         this.textBoxColor3.Name = "textBoxColor3";
-         this.textBoxColor3.Size = new System.Drawing.Size(24, 20);
-         this.textBoxColor3.TabIndex = 15;
-         this.textBoxColor3.Tag = "Set Text BackColor";
-         this.textBoxColor3.Text = "C";
-         this.textBoxColor3.UseVisualStyleBackColor = true;
-         this.textBoxColor3.Click += new System.EventHandler(this.TextBoxColour_Click);
-         // 
          // FormColor1
          // 
          this.FormColor1.Location = new System.Drawing.Point(515, 139);
@@ -407,6 +407,17 @@
          this.FormColor1.UseVisualStyleBackColor = true;
          this.FormColor1.Click += new System.EventHandler(this.FormColor1_Click);
          // 
+         // Registartion_Butt
+         // 
+         this.Registartion_Butt.Location = new System.Drawing.Point(466, 64);
+         this.Registartion_Butt.Name = "Registartion_Butt";
+         this.Registartion_Butt.Size = new System.Drawing.Size(86, 31);
+         this.Registartion_Butt.TabIndex = 17;
+         this.Registartion_Butt.Tag = "Анкета для регистрации";
+         this.Registartion_Butt.Text = "Registartion ";
+         this.Registartion_Butt.UseVisualStyleBackColor = true;
+         this.Registartion_Butt.Click += new System.EventHandler(this.button1_Click);
+         // 
          // GeneralForm
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -414,6 +425,7 @@
          this.AutoScroll = true;
          this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
          this.ClientSize = new System.Drawing.Size(561, 217);
+         this.Controls.Add(this.Registartion_Butt);
          this.Controls.Add(this.FormColor1);
          this.Controls.Add(this.FormFont4);
          this.Controls.Add(this.statusStrip1);
@@ -481,6 +493,7 @@
       private System.Windows.Forms.Button textBoxColor2;
       private System.Windows.Forms.Button textBoxColor1;
       private System.Windows.Forms.Button FormColor1;
+      private System.Windows.Forms.Button Registartion_Butt;
    }
 }
 

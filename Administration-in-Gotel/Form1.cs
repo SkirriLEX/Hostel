@@ -21,7 +21,7 @@ namespace Administration_in_Gotel
          {
             Obj.MouseEnter += Tip;
             Obj.MouseLeave += Obj_MouseLeave;
-         }
+         }         
       }
       private void Obj_MouseLeave(object sender,EventArgs e)
       {
@@ -63,8 +63,8 @@ namespace Administration_in_Gotel
       }
       private void Anketa_Click(object sender,EventArgs e)
       {
-         SetapInfomation Setinf = new SetapInfomation();
-         Setinf.ShowDialog( );
+         SignIN OC = new SignIN();
+         OC.ShowDialog( );
       }
       private void ourContactsToolStripMenuItem1_Click(object sender,EventArgs e)
       {
@@ -86,10 +86,6 @@ namespace Administration_in_Gotel
          if(MessageBox.Show("Вы уверены что хотите выйти","Выход",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             Close( );
       }
-      private void Form1_Scroll(object sender,ScrollEventArgs e)
-      {
-         Console.WriteLine("scrolling");
-      }
       private void timer1_Tick(object sender,EventArgs e)
       {
          this.Text = this.Text.Remove(0,1) + this.Text[0];
@@ -105,7 +101,6 @@ namespace Administration_in_Gotel
          if(WindowState == FormWindowState.Minimized)
          {
             Hide( );
-
             notifyIcon1.BalloonTipTitle = "Программа была спрятана";
             notifyIcon1.BalloonTipText = "Обратите внимание что программа была спрятана в трей и продолжит свою работу.";
             notifyIcon1.ShowBalloonTip(1000);
@@ -158,9 +153,10 @@ namespace Administration_in_Gotel
          }
       }
 
-      private void textBox2_TextChanged(object sender,EventArgs e)
+      private void button1_Click(object sender,EventArgs e)
       {
-
+         SetapInfomation OC = new SetapInfomation();
+         OC.ShowDialog( );
       }
    }
 }

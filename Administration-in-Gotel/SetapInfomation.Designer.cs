@@ -109,7 +109,7 @@
          this.Set.Name = "Set";
          this.Set.Size = new System.Drawing.Size(75, 23);
          this.Set.TabIndex = 4;
-         this.Set.Text = "Set";
+         this.Set.Text = "Enter";
          this.Set.UseVisualStyleBackColor = true;
          this.Set.Click += new System.EventHandler(this.Set_Click);
          // 
@@ -151,7 +151,7 @@
          this.Controls.Add(this.RepeatРassword);
          this.Controls.Add(this.Рassword);
          this.Name = "SetapInfomation";
-         this.Text = "SetapInfomation";
+         this.Text = "Registration";
          this.ResumeLayout(false);
          this.PerformLayout();
 

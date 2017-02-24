@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClassLibrary1">
+      <HintPath>..\..\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll</HintPath>
+    </Reference>
+    <Reference Include="ModulesLibrary">
+      <HintPath>..\..\ModulesLibrary\ModulesLibrary\bin\Debug\ModulesLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +101,12 @@
     <Compile Include="SetapInfomation.Designer.cs">
       <DependentUpon>SetapInfomation.cs</DependentUpon>
     </Compile>
+    <Compile Include="SignIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIN.Designer.cs">
+      <DependentUpon>SignIN.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +138,20 @@
     <EmbeddedResource Include="SetapInfomation.resx">
       <DependentUpon>SetapInfomation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SignIN.resx">
+      <DependentUpon>SignIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataBaseDataSet.xsc">
+      <DependentUpon>DataBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseDataSet.xss">
+      <DependentUpon>DataBaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -132,7 +163,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\avaAlina.png" />
@@ -142,6 +175,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\avaKirill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dll\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBase.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

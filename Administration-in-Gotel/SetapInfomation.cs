@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Administration_in_Gotel.Properties;
 
 namespace Administration_in_Gotel
 {
@@ -42,6 +43,7 @@ namespace Administration_in_Gotel
       {
          int firstSymbol = TboxMail.Text.IndexOf("@");
          int secoundSymbol = TboxMail.Text.LastIndexOf(".");
+         MessageBox.Show("Mail: " + Settings.Default.Mail + "  Pass:" + Settings.Default.password);
          if(firstSymbol < 0 && secoundSymbol < 0 && secoundSymbol < firstSymbol + 3)
          {
             TboxMail.ForeColor = Color.IndianRed;
@@ -49,15 +51,15 @@ namespace Administration_in_Gotel
          }
          else
          {
-            if(TboxPass.Text==TboxRPass.Text)
+            TboxMail.ForeColor = Color.Black;
+            if(TboxPass.Text == TboxRPass.Text)
             {
-               if(TboxMail.Text == Smail && TboxPass.Text == Spass)
-               {
-                  MessageBox.Show("Данный введени правельно","анкета");
-                  Close( );
-               }
-               else
-                  MessageBox.Show("Наведите мишкой на поле (ToolTip)");
+               TboxRPass.ForeColor = Color.Black;
+               Settings.Default.password = TboxPass.Text + "";
+               Settings.Default.Mail = TboxMail.Text + "";
+               Settings.Default.Save( );
+               MessageBox.Show("Регистрация пройдена успешно!! Mail: "+ Settings.Default.Mail+"pass:" + Settings.Default.password);
+               Close( );
             }
             else
             {
@@ -65,7 +67,6 @@ namespace Administration_in_Gotel
                MessageBox.Show("Пароли не совпадают");
             }
          }
-
       }
 
       private void TboxPass_KeyPress(object sender,KeyPressEventArgs e)
